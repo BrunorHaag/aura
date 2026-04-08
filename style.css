@@ -77,3 +77,38 @@ h1 {
     border-top: none;
 }
 
+h2 {
+    font-size: 14px;
+    margin: 5px 0 2px 0;
+    color: #000;
+    border-bottom: 1px solid #3d2b1f;
+    display: inline-block;
+}
+
+ul {
+    margin: 5px 0 5px 15px;
+    padding: 0;
+    font-size: 12px;
+    list-style-type: "◈ "; /* Um marcador mais temático */
+}
+
+/* Simulando o ATK/DEF no final */
+.caracteristicas p {
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+/* Estilizando o último parágrafo (Elemento) para parecer o status final */
+.caracteristicas p:last-child {
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    border-top: 1px solid #3d2b1f;
+    padding-top: 5px;
+}
+
+strong {
+    color: #000;
+    text-transform: uppercase;
+}
