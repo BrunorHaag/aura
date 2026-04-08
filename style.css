@@ -1,50 +1,79 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #1a1a1a;
     color: #333;
-    font-family: sans-serif;
+    font-family: 'Spectral', serif; /* Fonte mais séria/medieval */
     padding: 20px;
-    line-height: 1.5;
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
 }
 
+/* O corpo da carta */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
+    max-width: 380px;
+    background: linear-gradient(135deg, #d4a373 0%, #a68a64 100%); /* Cor de monstro comum */
+    padding: 15px;
+    border: 6px solid #3d2b1f;
+    border-radius: 8px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.8);
+    position: relative;
 }
 
-#imagem {
-    width: 100%;
-    max-width: 300px;
-    display: block;
-    margin: 0 auto 20px auto;
+/* Moldura interna cinza */
+.card {
+    border: 4px solid #5d4037;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
-    text-align: center;
+    order: -2; /* Força o título a ser o primeiro elemento */
+    font-size: 22px;
+    text-align: left;
     color: #000;
+    margin: 0 0 10px 0;
+    padding: 3px 8px;
+    border: 2px solid #3d2b1f;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 1px 0px #fff;
+    text-transform: uppercase;
 }
 
+/* A imagem (quadrada e com moldura) */
+#imagem {
+    order: -1; /* Fica logo abaixo do título */
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Garante que seja um quadrado */
+    object-fit: cover;
+    border: 5px solid #808080;
+    box-shadow: inset 0 0 10px #000;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Caixa de texto inferior (bege) */
+.descricao, .habilidades, .caracteristicas {
+    background-color: #f5f5dc;
+    border: 2px solid #a68a64;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+/* Removendo espaços extras para parecer uma caixa única */
 .descricao {
-    text-align: center;
-    margin-bottom: 30px;
+    margin-top: 5px;
     font-style: italic;
+    font-size: 13px;
+    border-bottom: none;
 }
 
-h2 {
-    font-size: 20px;
-    border-bottom: 1px solid #ccc;
-    margin-top: 20px;
+.habilidades {
+    border-top: none;
+    border-bottom: none;
 }
 
-ul {
-    margin-left: 20px;
+.caracteristicas {
+    border-top: none;
 }
 
-.caracteristicas p {
-    margin: 10px 0;
-}
-
-strong {
-    color: #555;
-}
