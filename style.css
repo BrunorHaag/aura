@@ -31,3 +31,20 @@ h1 {
     font-style: italic;
 }
 
+h2 {
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.caracteristicas p {
+    margin: 10px 0;
+}
+
+strong {
+    color: #555;
+}
